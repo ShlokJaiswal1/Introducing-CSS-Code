@@ -1,0 +1,90 @@
+body{
+    background-color:rgb(13, 31, 49);
+    text-align: center;
+    }
+
+a{
+    color:rgb(0, 162, 255);
+    text-align: center;
+}
+
+.Main{
+    color:gold;
+    text-align: center;
+    background-image: url('Images/Dark.jpg');
+    }
+
+h1{
+    color:crimson;
+    text-align: center;
+}
+
+#CSS{
+    color:whitesmoke;
+    font-size: 150px;
+    text-align: center;
+    background-image: url('Images/Dark.jpg');
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    }
+
+
+ol,ul li{
+     text-align: left;
+     color:turquoise;
+     font-family: Georgia;
+     font-weight: normal;
+     font-size: 21px;
+}
+
+p,label {
+ color:rgb(87, 230, 62);
+ font-family: Verdana;
+}
+
+span{
+    color:tomato;
+    font-family: Trebuchet MS;
+}
+
+h2{
+    color:rgb(24, 238, 167);
+}
+
+h3{
+    color:violet;
+}
+
+h1,h2,h3,.Main{
+    font-family: Arial Black;
+    font-weight: bolder;
+}
+
+a{
+    font-family: Arial Narrow;
+    font-size: 20px;
+    font-weight: 650;
+}
+
+p,label,span{
+    font-size: 22px;
+}
+
+ hr{
+     color:black
+ }
+
+ .semiMain{
+     font-family: Courier New;
+     font-weight: bold;
+     font-size: 25;
+     color:rgb(177, 127, 224);
+ }
+
+ h4{
+     color:chocolate;
+     font-family: Lucida Grande;
+     font-size: x-large;
+ }

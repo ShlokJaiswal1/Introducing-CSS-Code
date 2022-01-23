@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+
+    <link rel="stylesheet" href="styling CSS.css">
+
+</head>
+
+
+<body>
+ <h1 id="CSS">CSS</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+    alt="CSS_3" width="120" height="180"/>
+
+
+    <hr><hr><hr>
+ 
+
+ <nav>
+     <table>
+         
+        <tr></tr>
+        
+        <tr><th scope="col" colspan="2"><a href="#Introduction">Introduction</a></th></tr>
+        <tr><th scope="col" colspan="2"><a href="#Syntax">Syntax</a></th></tr>
+        <tr><th scope="col" colspan="2"><a href="#Selectors">CSS Selectors   :-</a></th>
+        <td><a href="#type">TYPE Selector</a></td>
+        <td><a href="#attribute">Attribute Selector</a></td>
+        <td><a href="#Uni">Universal Selector</a></td>
+        <td><a href="#class">Class Attribute</a></td>
+        <td><a href="#ID">ID Selector</a></td>
+        <td><a href="#Pseudo">Pseudo Selector</a></td>
+        <td><a href="#ID vs CLASS">ID vs CLASS</a></td>
+        <td><a href="#Chain">Chaining</a></td>
+        <td><a href="#DC">Descendant Combinator</a></td>
+        <td><a href="#MS">Multiple Selectors</a></td>
+        </tr>
+        <tr><th scope="col" colspan="2"><a href="#Declarations">Declarations ( Different Properties And Values )</a></th>
+        <td><a href="#Font">Common</a></td>
+        <td><a href="#Box">Box Modeling</a></td>
+        </tr>
+        <tr></tr>
+        
+
+     </table>
+    
+    </nav>
+   <hr><hr><hr>
+   <div id="Introduction">
+
+    <h1>Introduction</h1>
+        <h3 class="Main"><b><em><strong><i>The basic anatomy of CSS syntax written for both inline styles and stylesheets.<br>
+    Some commonly used CSS terms, such as ruleset, selector, and declaration.</i></strong></em></b></h3>
+
+    <ul>
+   
+        <li>CSS inline styles can be written inside the opening HTML tag using the style attribute.<br>
+        Inline styles can be used to style HTML, but it is not the best practice.</li>
+       
+        <br>
+        
+        <li>An internal stylesheet is written using the (style) element inside the (head) element of an HTML file. <br>
+            Internal stylesheets can be used to style HTML but are also not best practice.</li>
+     <br>
+            <li>An external stylesheet separates CSS code from HTML, by using the “.css”file extension. <br>
+        External stylesheets are the best approach when it comes to using HTML and CSS.</li> 
+       <br>
+       
+       <li>External stylesheets are linked to HTML using the (link) element.</li>   
+              
+
+    </ul>
+
+</div>
+  <hr>
+
+<div id="Syntax">
+
+ <h1>Syntax</h1>
+
+ <p class="Main"><b>Like HTML there are some set of rules for writing CSS code which is called it's syntax.</b></p>
+ <br>
+ 
+ <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWIAAACOCAMAAAA8c/IFAAABAlBMVEX/////knb/zbrd3d28vLz/ybnPz88AjzMAkDb7+/sAjjD/9/T/5N3/on7/sJL/8u//pYT/xK8AiBvt7e2urq709PQAkjvNzc2ZmZnV1dXn5+e1tbUAiyeNjY2lpaX/moBkrnjo9u55eXmPj4+CgoKnzrFrt4Q8pGB8w5at2Lz/WACOjo4AmkiZ0K7/mHVxcXHI6db/TQDt9vBatXz/jGz/MwArn1X/eEX/sp8AgwDY7eBNpWe21r7/1s3/6+b/4dnN59ed0rGHyJ//YR3/flBjY2NztoVhuIL/aCn/uqn/hFv/RAD/cDz/0sn/Xyb/hGL/uJ9ErW2BvJFRUVH/kGP/KwBOwn8SAAASJklEQVR4nO2dCV/aSheH55qYDQQk+0IKIZWlIBBrUGRXXKq22uv9/l/lPZOETQFBSW375v+7V0JmMnPmmZkzZ6JJEYoUKVKkSJEiRYoUKdJvrGQyGYOPGHyy06/Bmdg0X+LhI6z7G/SpfHx8vosezo+PyykA2YCv+17KyTEcdiYZD1MfZeIfrk93+yi2f9NtANadBLt/HmfZhwDxE4ql7pIonkSo2/UQx3q95Acb/McpXvaHaafhoztpTtNOvsL58yS6voGeSGHEsafj47vuR9j5B6vTCA4OG81P9zGUvGg0TwLncNK8379OINSEQZ3yEO8B9NTThxn7Z2qCGMV3D6+/AuP4/mE54Z05aXxvHMJnc3eM+KL548fF9UfZ+odq7Cg8xW7j3ueOTxEcxf55d3YUXxzenNzsf4Sdf7IS54luPJHYeep043vN2EOq1+3dHXpJsNyhm/M4OrxIPpwnMOLEXS95HwUWm+qkfHx73es2b72VbPcOIrWUHw2fXMCPvetu7/y/ux8p9LQHHXJ73IjC40iRIkX6ZYqxH23BX69E76Mt+OuViH+0BX+9IsShK0IcuiLEoStCHLoixKErQhy6IsShK0IcuiLEoStCHLr+ZMTdi38ibUtf9xYhjid+daf+xWIjxGErFiEOWxHi0BUhDl0R4tD12yFmid/+d54isVH23w4xWeM/rO71xCr2Rvl/DWKZWj/vKCTEpritkojMRtm3iFhWTJsgvpi6puRJURHyJtLMvKrlTdOyBUtgbXnptaqtsBlSV75oqMbbAmERoqDom9tAgg08lVEoSsmomqLndaQqeU3OmORIUSxZy2w2yWeLtkg+QyiKwhIZzZJJm9dMZZ2hs0XE5EhUbXkkIkvjLblGIpvKmJkRBTNfUZFCImHFxTKJZKQSFolqIqkgWxUy5mhjHKyZQbpC2qxmI7Um1wi+RliCpeg1hCwR2YRGvqFhgUwCTKTUf3kYxXloHW8r+dEa120RsWghtsbXRA0ao6h5FZlCRkQsbwNiCvE2uYqYmCHgAsDjI84TeQKxmy98lILUDPCVbTBHszXWJvNAXsOmiZBEvsMLEYrKw1SzJ4gtfi0Tt4l4JMqKiEcxKdpiBn5oGQFR2BJF19Ari4RpseCGwfQRL2fYWkaHCaltbANls6ZO2CyMXs1mbVWzeEtlVaIGiFUAbr6hXWPhqylbHPGEjRRBG+nQuuWub6ptIq6ZAiJNEomCqaG8Yqr4iMdnCEFExOo5iqcwKci6buqsQMoEuFV1cxso2yRZ3ZQRYZqiaJtgiGYKoglnZFzBG4qcKRyuFnRsIsWbsi6yuJ2va4uIidHsmm3NdzAr6r8iGCMzMzNXs+ZdE8uvWg1C0zaXu9kxQpA6miXOC+uuXe+JrURSnxlXFCnP+UpiW728mYkhxsXi2xyfsoWqJ5Lf5RmWaTMTI8RvUIR4RhHiRYoQry82QuxpK4g1mVogOaMuPD1Z8/lFyaq96Cp5EhnwC+taJlPYJPc4zhRXZ1ts4kx6CIh1crHFC8+SwurLFl71ZRInqebK5j0vbJMOUfPaenWsLlRV5jck20G8Sbw5jf83uEyYIl5nz/pGCYFBr2xEXy0mQry8lggxVoT4dUWIPW2IeKO7sPzEfnn9vb4+yUps8DuqTTWuhXhfqPcMx2rEJanyGSHJrTiLC6sfuW5lSUV1qXL5qjW5s0ohFxwPK1Lp1QuwWq3W8jvhuVZribG5ivuI0OdKpbpWLShbqfSXJDlBJYxbAUucIVAovqyv4LpH/WWIe8E7M0oGB4hP06e5RblQ36C5dHqJGXWDPljVgsAM2h2XXeSMtRCzlXRlsT1eKenT9pK6aLqAUPX09Oc6tSDknp72lyQN0mmvn07TaUB9aTDp06sXmVqVNEdXWii2s6qWEocRL1WRk5aPiDrHrIOYmSKmufVGscsUlgxU0JDm+kvqopnCWuW/rjkuOXdpuQOOW8WgfpAdVr2istkDp5XNDmFOBB+BLidDkK0eZA+qOKV0mc1W8dkx4jacGOIT7Wy23bo8yCF2ehfXQzzIHmC2HmKnmD2A1GI2iy/JVaFub1BOr2HPJKkCRcJhv+gXDVZlcdXwrepK0pl/cdBKyJMd9tEYMVhR8ltXrHul9OFEDmrtz1cDidlsC2rLggtwLrOXUKQzOIBL6mhQkKQCTgXrUB/scS8vS4FJ3se4GKdCvxzdEw3T4AMMCSOWOPDFLsdAJVVjdjJPELcrhpFOp6+Q8wgHBseUxoidI+8EPYDGGnSBMWDmnKWN+hRxpXJq0MYwQJwrcBIM0QLHQcltXCpn4J56TJ8GFTunjCQZp4+ILaZx0diBFw0ooCVxLtQPiel0a2yiA2ZBJjyvfcQDw6jidnCQi+GO8IikCxJ4PKmFnVv6LLiwdMoxMB+cNFfAA5WDlra8VhpMq5iWJC4NbgQcAVs6lSQmXWkxNOdgS7g2ap2m/dVrJeI2zbh9FmYdRizBBTCgB4g9YqSZOZqlXa+3WhVGGor9oyt0xdFFp1RhAKSPuAg/nbbLMH00oGGAneG+Z6QZxNLAqTMS4wSjuODVUGBoaJJEP7ZyRwzukCOGG7tYmJhuy3HQkGOGbN1l8Hp7RkvtM4auA3eaaztTG51siXXqFQm8d4CY5qqoLzGVAdvmmCPcUmxWReKKeIlmssGFrHPF0H3EGkzBrzIHjZMGbK7ottgBR1cdh0WMBMtd32XOWM/8AW4POLGWIflgHJd+XIr40WuY73M8xC2JeYRFmT6a5hlIvtMH/LS3oPZzBs6Ka/vsI85JkpTzHGQVGufnejaK8US4YmByvEB8wDF4ZDHccHYUY1/sTZ4Kg82v0lzd72QvH64K90X7Z7Va/YmPnPrgsytBSTOIYbxAXsfwEeNluerhnhnFCB3Q84ixaUNclzPxxR5iSMQXQbddoT6NC56MYjQ0lq8vFTyuZhHDkK3k4PsYDuvStBtcDkPMPwKsj46H/NJHXGe8pamEjwe4m58pQAzLQnWCGMdBHuJH8AgM/E/PB3+sj7gl4VRI9uquc7iFU8QwYTnO+AnzjgaXwEj0HGJ/ZowRYyp173hOV88QAy+JgUbX0Tzilo8YncHcvaKl+WCn5HLc4+IQ8yXiAce0j6Yh1irEg3chxkY+YsQFDzEoO2djgLgv+YwZ7Oc9xEeziDlIAXZVg3GLLeixVxC3liKWXDzhcZXsUKJpBvu8hYiHHF164XtXIC4wHEzS9gxiB/BVvLk41qyjwOfZ1xxFgLjfbo87KkDsuaVgucOO2nElGvs+aA0WWOK02+P5M3UUfqyUczxHUaGxN4WGcjNx8bTH5hD/xAsLEl8gzrXb/ReIYZmv4ypZSGrVYTh9xogHLxA7HDSW9sZavd1+3VHAmD1qtbzyAsTQ9bBY12czzSx3larTenW5CxCfGdysL+47A1hbx8sd1OKeARhADN7NLTlOtfBzGuz73S/BaVz0Ud/JDXGXFGip7s8lbPh0uYP1mSmJsNzNI8aTq5Ub0s8R12lj6ot9xBUIyc4gEsS++KokOgd43QW3UsiNl7sxYg+Qv9eVjCCiWLXcQfQDQZvEGOOgzfMC9PxueRK0lZi5oM3AgVTd4KZBG47i/HAJ9ww3E1HQNA6q8HAtegFhKc3QhuvSXtDGeVFSGhBfcRMXBbjpcdDmJdfRAS46V+GgZ3MSx80EbW3IC+2gYU7mOM4dW3GAW8d4vqXE4YixlcYBXF3ini13MA6xPRWo3nHTuDoDx+0VbhK0AeLgohLjhSXQKoP2W7o6LmaHEJLj3YK/9cAXXvpR+wLEyKnioBznmmw9YD/g1TO39fAyD3HUHlxXzF7C1yJOH2SzmHzpIFtlx1sPCOizxRL2v9zMPhJvC7AlrSHeVrRwvI9bApmhhS249mDq/epQfd0rzvGSg61HG+8hOBxL9L0TOW/L0PL3D76uGM9PgVlVf+uRw40s9j2IuGYHeTUBF39L3oLY0GtYyQh2+KsRr6OVG+itqi8Zy/fMb9Cg5DkRbsntDCyIIiqt5ckL1B4vzD+NYNv8ygZ6Da28DbRVfTZe3sl6jwp408cZy28FDk/TzIrkRWIfaX/r6xTwTnFyG+h9WnUzc6squv2tllc9c133qLT8nuig4rrFzSZOrhKwaFU8xzG+mblEK/8yOUhkY89OhK3f/lGmGc3auhtbkEFc9VeifPAMxs7u+Iy+tSdVVon1jJLf/LDGL9Uskr1F/0IDv+oPeca/fNuZvE5c+DWIPaP+EMSzSFIR4jAUIQ5d70MsfhBi9HchzpPLJQT8p4hNfUX2rUn3lzvzV9T1bmVeQ8wScxLIua/ac8QasbFIffNrvHrFza97TbKy/TJnH5ZfiPiZFv+V7s57/oESIsQ/6tlUYT/ItA7ixY+rRYjXVIQ4Qhy+/lLEYf6B5aZaGaJuQesgXvy8+rsQv+Ep/fAUsi2rEa964mcDxDNugSVfPJr98kyYmr3FRb2YS+/80+KFWomYH8282UR81tnrIxYz08eo1NF8rz0vNXTp/07rtp893hXOk/CLEXvzmMXvBgimEfzAz/Owk8SNRrGs+JfiK/PqpEj8NXi859eB5mvT5pHKtHnwH+UPcHZ8aktaiFhVBJk3zQxr6kgQLE3LKBlqZGqKWVPJkelPprURKwqMYsG0eCqTMdmMSlhmnqjlBeGLTWpQWk3lFUg1a3otlCcRZyVnlBGShQzJZxSLJRXWhuZlLEG24OsXW84ryDQtUh2Z73o9yJwWIiZtXhRs09JMXbVMm8wTMIdqImkitYbfS+NpXcSUgkhTrZm2bsEYAsSsatbEjIp4aC+yeGQRCol0hbKQGYInnBNvi/xItJQviilDk2AUa9CveDCr5r+IhAFlEhmkWVqNIDZ7VdgKLb5HQdZ0E48ok6RM7LPwbK6Jugm1i/aGiKFjZFOGOUjU8NcvhKoQFn4jk0mSHuIMkSERgV/pI4SNWLOQWOMxvDx+ZoRURKicwG8Uyqs1pAvY0gx+VZPFh4xYlkmTsGQKHARv6RQh2yol1nTVJgVSHc/mdRHzNVIZqRZJEYKiUoRFCoqMv7MZXbBZW1drOlED7OSIz2/1AehFyivkSDfBDtVSVcK01RoYZNosmZFHIvlFNm3R0klBHMnbeyffQsQiQYkQaWkipYo8ReCoi0AEgTT8oQZ3bNf2xRpFaIinVMSqMq9BkZRGqKrK8pSmihqhqZRXMKUSKhX2sidSBCGyqtc8QlQpniCgVopnVYKA5ooqbrCKNLCPChXxWnrX1uP/SRHi0BUhDl0R4tAVIQ5dEeLQFSEOXRHi0PUOxHs7kdbR05sRJ3d/Q33b+WgLXmrnd/oNz/v16aMN+PsVIQ5dEeLQFSEOXRHi0BUhDl0R4tAVIQ5dEeLQFSEOXRHi0BUhDl2pjzbg79eb7xtGihTpL1Nv9/U8M+reeB/Jk/nTyZtF74n4/9PT9+/fn3rPTu7/WJT1roNQ4uuChPs77yPemD/du4sQYzU/3e83G89esry/CCQ6B8Tx572Bdd/0Prrl+dMRYl9N/GvuxHcW7ZePr3uITdwe3yUBcfz8+BgQ3TQP/0sdHh+Xd9Fh4/a/h4d/IPft8UUSnTS/HV93vTLu7y6OoZcw4t3z42vor/3z4/IORnx4EYUgHuLuXSd+vt9NfUOJ8m7vaw8Qx3q9ztcEgE/1ut1e76aMuuc3vdjDJ6C422keopNyIv7N34h0Gol46joGiLvlVPywDC4jFb9JxZuxVDMayD7i5F1n72L35uQueeetXBhx4vr29hO6wS5j9+L29tZ3FIAYwKN4OXYCm5D9C+93v9hRQBGAeP8Codhd5+EbPt272/sWEQ4Qd667e98vmhc/ktf3+CQgTtztxMAr3DxhH5vq9soTxD8eAGgjdrIH314ghnUy1tzxF8XedTNyE8hHvHN9iB7wlN5BT/Cx0wXET0Dw0Ee8cw7QIVq43vcQJy5iKNVEs4iv4fAcO4pOuYN2G8n7Rgd1wRcnU82Pbt9voOZto3GeiqHYYaPRuGCTF7eNchwGY+f89vs1IMZTvtkoN8FRpBq3+zCwY98ajesOShwC1zsf8W25cb7vBW2pcqMMjuRTudFI9K5huYtcBep1Op04PmDhCAKEGP7ahdAs3ol3/SOU7HSSHS8pCafwJ2TER10/hEt2eh3vvFdKDwUfsQ6LYveRq4gUKVKkSJG2q/8BpmF+GqcVp7QAAAAASUVORK5CYII="/>
+ 
+ <ol>
+    
+    <li>The selector points to the HTML element you want to style.</li>
+     <li>The declaration block contains one or more declarations separated by semicolons.</li>
+     <li>Each declaration includes a CSS property name and a value, separated by a colon.</li>
+     <li>Each declaration includes a CSS property name and a value, separated by a colon.</li>
+
+ </ol>
+
+ 
+</div>
+<hr>
+
+<div id="Selectors">
+
+   <h1>CSS Selectors</h1>
+   <p class="Main"><b>A selector is used to target the specific HTML element(s) to be styled by the declaration. One selector you may already be familiar with is the type selector. Just like its name suggests, the type selector matches the type of the element in the HTML document.</b>></p>
+   
+   <label for="Types Of Selectors">The various types of Selectors are described below:-</label>
+   
+    <ul id="Types Of Selectors">
+        
+        <li>CSS can select HTML elements by type, class, ID, and attribute</li>
+        <li>All elements can be selected using the universal selector.(*)</li>
+        <li>An element can have different states using the pseudo-class selector.</li>
+       
+        <label for="Pseudo" class="Different">Like:-</label>
+       
+     <ul>
+          
+            <li id="Pseudo">:hover</li>
+            <li id="Pseudo">:active</li>
+            <li id="Pseudo">:disabled</li>
+            <li id="Pseudo">:focus</li>
+            <li id="Pseudo">:visibled</li>
+        
+    </ul>
+        
+        <li>ID can be used as selectors.</li>
+        <li>Classes can be reusable, while IDs can only be used once.</li>
+    
+    </ul>
+
+   
+    <div id="type">
+    
+    <h2>TYPE Selector</h2>
+    <p class="semiMain">The CSS type selector matches elements by node name. In other words, it selects all elements of the given type within a document.</p>
+    <img src="data:image/png;base64,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">
+   
+   <h4>Example Explained</h4>
+ <ul>
+     <li>p is a selector in CSS (it points to the HTML element you want to style: paragraph).</li>
+     <li>color is a property, and red is the property value</li>
+     <li>border is a property, and 1px solid blue is the property value</li>
+ </ul>
+   
+ <h4>Some important notes on the type selector:</h4>
+   
+   <ul>
+       <li>The type selector does not include the angle brackets.</li>
+       <li>Since element types are often referred to by their opening tag name, the type selector is sometimes referred to as the tag name or element selector.</li>
+   </ul>
+
+   </div>
+
+  
+   <div id="attribute">
+   
+   <h2>Attribute Selector</h2>
+   <p class="semiMain">The attribute selector can be used to target HTML elements that already contain attributes. Elements of the same type can be targeted differently by their attribute or attribute value. This alleviates the need to add new code, like the class or id attributes.</p>
+   <p>The most basic syntax is an attribute surrounded by square brackets (Like:- [href]).</p>
+   <p>One way is by using (type[attribute*=value]). In short, this code selects an element where the attribute contains any instance of the specified value.</p>
+   <p>Example of Attribute:- ( img[src*=value]{ }  )</p>
+   <p>Notice how no new HTML markup (like a class or id) needed to be added, and we were still able to modify the styles of each image independently. This is one advantage to using the attribute selector!</p>
+
+</div>
+
+
+<div id="Uni">
+   <h2>Universal Selector</h2>
+   <p class="semiMain"><b>The universal selector selects all elements of any type.</b></p>
+   <p>The universal selector uses the (*) character in the same place where you specified the type selector in a ruleset</p>
+   </div>
+   <div id="class">
+   <h2>CLASS Selector</h2>
+  <p>CSS is not lipmited to selecting elements by their type. As you know, HTML elements can also have attributes. When working with HTML and CSS a class attribute is one of the most common ways to select an element.</p>
+  <p>To select an HTML element by its class using CSS, a period (.) must be prepended to the class’s name.</p>
+  <br>
+  <p>Multiple CSS classes can be applied to one HTML element.</p>
+  <p>We can add multiple classes to an HTML element’s class attribute by separating them with a space. This enables us to mix and match CSS classes to create many unique styles without writing a custom class for every style combination needed.</p>
+
+</div>
+
+
+<div id="ID">
+
+  <h2>ID Selector</h2>
+  <p class="semiMain"><b>Oftentimes it’s important to select a single element with CSS to give it its own unique style. If an HTML element needs to be styled uniquely, we can give it an ID using the id attribute.</b></p>
+  <p>In contrast to class which accepts multiple values, and can be used broadly throughout an HTML document, an element’s id can only have a single value, and only be used once per page.</p>
+  <p>To select an element’s ID with CSS, we prepend the id name with a number sign (#). </p>
+
+</div>
+
+
+<div id="Psuedo">
+ 
+ <h2>Pseudo Class</h2>
+ <p class="semiMain">You may have observed how the appearance of certain elements can change, or be in a different state, after certain user interactions. For instance:</p>
+ <p>Some buttons are disabled until you fill the form. Some things in a website are highlited on hovering over them.</p>
+ 
+</div>
+ 
+ 
+ <div id="ID vs CLASS">
+  
+  <h2>ID vs CLASS</h2>
+  <p class="semiMain">Classes can be reusable, while IDs can only be used once.</p>
+  <p>Same Classes can be applied to many elements.</p>
+  <p>IDs are more specific than classes, and classes are more specific than type. That means IDs will override any styles from a class, and classes will override any styles from a type selector.</p>
+  <p>These are all examples of pseudo-class selectors in action! In fact, :focus, :visited, :disabled, and :active are all pseudo-classes. Factors such as user interaction, site navigation, and position in the document tree can all give elements a different state with pseudo-class.</p>
+  <p>A pseudo-class can be attached to any selector. It is always written as a colon : followed by a name. For example p:hover.</p>
+
+</div>
+
+
+<div id="Chain">
+
+ 
+    <h2>Chaining</h2>
+  <p class="semiMain"><b>When writing CSS rules, it’s possible to require an HTML element to have two or more CSS selectors at the same time.
+
+    This is done by combining multiple selectors, which we will refer to as chaining.</b></p>
+    <p>For instance, if there was a special class for (h1) elements, the CSS would look like below:</p>
+        <p>(h1.special{   })</p>
+        <p>The code above would select only the (h1) elements with a class of special. If a (p) element also had a class of special, the rule in the example would not style the paragraph.</p>
+ 
+      
+</div>
+        
+        
+<div id="DC">
+   
+    <h2>Descendant Combinator</h2>
+    <p class="semiMain"><b>In addition to chaining selectors to select elements, CSS also supports selecting elements that are nested within other HTML elements, also known as descendants. </b></p>
+    <p>For Example:- If there is a (ul) and (li) are nested inside it. And the (ul) has a class (JKF)</p>
+    <p>The nested (li) elements are descendants of the (ul) element and can be selected with the descendant combinator like so:</p>
+    <p>.JKF li{}</p>
+    <p>In the example above, .main-list selects the element with the.main-list class (the (ul) element). The descendant (li)‘s are selected by adding (li) to the selector, separated by a space. This results in .main-list (li) as the final selector.</p>
+    <p>Selecting elements in this way can make our selectors even more specific by making sure they appear in the context we expect.</p>
+
+</div>
+
+
+<div id ="MS">
+    
+    <h2>Multiple Selectors</h2>
+    <p class="semiMain"><b>In order to make CSS more concise, it’s possible to add CSS styles to multiple CSS selectors all at once. This prevents writing repetitive code.</b></p>
+   <p>Nested elements can be selected by separating selectors with a space.</p>
+   <p>Multiple unrelated selectors can receive the same styles by separating the selector names with commas.</p>
+
+</div>
+
+</div>
+
+
+<hr>
+<div id="Declarations">
+
+<h1>Declarations ( Different Properties and Values )</h1>
+<p class="Main"><b>The purpose of CSS is to add style to web page, and each element on the page can have many style properties. Some of the basic properties relate to the size, style, and color of the element. In this lesson, you’ll learn some fundamental CSS visual rules that you can use to start styling web page elements!</b></p>
+
+
+
+
+    <div id="Font">
+    
+    <h2>Some common declarations</h2>
+
+
+
+ <h3>Font Family</h3>
+<p class="semiMain"><b>Font refers to the technical term typeface, or font family.</b></p>
+<p>To change the typeface of text on your web page, you can use the font-family property.</p>
+
+<label for="font-family">When setting typefaces on a web page, keep the following points in mind:</label>
+<ul id="font-family">
+    
+    <li>The font specified must be installed on the user’s computer or downloaded with the site.</li><br>
+    <li><a href="https://www.cssfontstack.com/" target="_blank">Web safe fonts</a> are a group of fonts supported across most browsers and operating systems.</li><br>
+    <li>Unless you are using web safe fonts, the font you choose may not appear the same between all browsers and operating systems.</li><br>
+    <li>When the name of a typeface consists of more than one word, it’s a best practice to enclose the typeface’s name in quotes.</li>
+
+</ul>
+
+
+<h3>Font Size</h3>
+<p class="semiMain">Changing the typeface isn’t the only way to customize the text. Oftentimes, different sections of a web page are highlighted by modifying the font size.</p>
+<p>To change the size of text on your web page, you can use the (font-size) property.</p>
+<p>(px) means pixels, which is one way to measure font size.</p>
+
+
+<h3>Font Weight</h3>
+<p class="semiMain">In CSS, the font-weight property controls how bold or thin text appears.</p>
+<label for="normal">The font-weight property has another value: normal. Why does it exist?</label>
+<p id="normal">If we wanted all text on a web page to appear bolded, we could select all text elements and change their font weight to (bold). If a certain section of text was required to appear normal, however, we could set the font weight of that particular element to (normal), essentially shutting off bold for that element.</p>
+
+
+<h3>Font Align or Text Align</h3>
+<p class="semiMain">To align text we can use the (text-align) property. The text-align property will align text to the element that holds it, otherwise known as its parent.</p>
+<label for="Align">The text-align property can be set to one of the following commonly used values:</label>
+<ul id="Align">
+    <li><b>left</b> — aligns text to the left side of its parent element, which in this case is the browser.</li>
+    <li><b>center</b> — centers text inside of its parent element.</li>
+    <li><b>right</b> — aligns text to the right side of its parent element.</li>
+    <li><b>justify</b> — spaces out text in order to align with the right and left side of the parent element.</li>
+</ul>
+
+
+<h3>Color</h3>
+<p>Before discussing the specifics of color, it’s important to make two distinctions about color. Color can affect the following design aspects:</p>
+<ul>
+    <li>Foreground color</li>
+    <li>Background color</li>
+</ul>
+<p class="semiMain">Foreground color is the color that an element appears in. For example, when a heading is styled to appear green, the foreground color of the heading has been styled. Conversely, when a heading is styled so that its background appears yellow, the background color of the heading has been styled.</p>
+<p>In CSS, these two design aspects can be styled with the following two properties:</p>
+<ul>
+    <li><b>color:</b> this property styles an element’s foreground color</li>
+    <li><b>background-color:</b> this property styles an element’s background color</li>
+</ul>
+
+<h3>Opacity</h3>
+<p class="semiMain"><b>Opacity is the measure of how transparent an element is. It’s measured from 0 to 1, with 1 representing 100%, or fully visible and opaque, and 0 representing 0%, or fully invisible.</b></p>
+<p>Opacity can be used to make elements fade into others for a nice overlay effect.</p>
+
+
+<h3>Background Image</h3>
+<p class="semiMain">CSS has the ability to change the background of an element. One option is to make the background of an element an image. This is done through the CSS property background-image.</p>
+<label>Its syntax looks like this:</label>
+<br><span><b>.main-banner {
+    background-image: url('https://www.example.com/image.jpg');
+  }</b></span>
+  <br><br>
+  <ul>
+      <li>The background-image property will set the element’s background to display an image.</li>
+      <li>The value provided to background-image is a url. The url should be a URL to an image. The url can be a file within your project, or it can be a link to an external site. To link to an image inside an existing project, you must provide a relative file path. If there was an image folder in the project, with an image named mountains.jpg, the relative file path would look like below:</li>
+      <br><span><b>.main-banner {
+        background-image: url('images/mountains.jpg');</b>
+      }</span>
+  </ul>
+  <p>This element can be applied to other elements rather than text elements only.</p>
+
+
+  <h3>Important Property</h3>
+  <p class="semiMain">(!important) can be applied to specific declarations, instead of full rules. It will override any style no matter how specific it is. As a result, it should almost never be used. Once (!important) is used, it is very hard to override.</p>
+  <p>The syntax of !important in CSS looks like this:</p>
+  <span><b>p {
+    color: blue !important;
+  }
+   <br><br>
+  .main p {
+    color: red;
+  }</b></span>
+  <p>Since !important is used on the p selector’s color attribute, all p elements will appear blue, even though there is a more specific .main p selector that sets the color attribute to red.</p>
+
+
+</ul>
+
+
+
+
+</div>
+
+
+<div id="Box">
+
+  <h2>Box Modeling</h2>
+  <p class="Main">All elements on a web page are interpreted by the browser as “living” inside of a box. This is what is meant by the box model.</p>
+  <p>For example, when you change the background color of an element, you change the background color of its entire box.</p>
+  <label>The box model comprises the set of properties that define parts of an element that take up space on a web page. The model includes the content area’s size (width and height) and the element’s padding, border, and margin. The properties include:</label>
+  <br>
+  <ol>
+    <br>
+    <li><b>width and height:</b> The width and height of the content area.</li>
+    <li><b>padding:</b> The amount of space between the content area and the border.</li>
+    <li><b>border:</b> The thickness and style of the border surrounding the content area and padding.</li>
+    <li><b>margin:</b> The amount of space between the border and the outside edge of the element.</li>
+</ol>
+
+  
+    <h3>Height and Width</h3>
+    <p class="semiMain">An element’s content has two dimensions: a height and a width. By default, the dimensions of an HTML box are set to hold the raw contents of the box.
+
+      The CSS height and width properties can be used to modify these default dimensions.</p>
+  <p>Pixels(px) allow you to set the exact size of an element’s box (width and height). When the width and height of an element are set in pixels, it will be the same size on all devices — an element that fills a laptop screen will overflow a mobile screen.</p>    
+  
+
+  <h3>Borders</h3>
+  <p class="semiMain">A border is a line that surrounds an element, like a frame around a painting. Borders can be set with a specific (width), (style), and (color):</p>
+<ul>
+<li><b>width</b>—The thickness of the border. A border’s thickness can be set in pixels or with one of the following keywords: <b>thin</b>, <b>medium</b>, or <b>thick</b>.</li>
+<li><b>style</b>—The design of the border. Web browsers can render any of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#values" target="_blank">10 different styles</a>. Some of these styles include: <b>none</b>, <b>dotted</b>, and <b>solid</b>.</li>
+<li><b>color</b>—The color of the border. Web browsers can render colors using a few different formats, including <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"target="_blank">140 built-in color keywords</a>.</li>
+</ul>
+<span>p {
+  border: 3px solid coral;
+}</span><br>
+<p>In the example above, the border has a width of 3 pixels, a style of solid, and a color of coral. All three properties are set in one line of code.</p>
+<p>The default border is medium none color, where color is the current color of the element. If width, style, or color are not set in the CSS file, the web browser assigns the default value for that property.</p>
+
+
+  <h4>Border Radius</h4>
+ <p class="semiMain">You can modify the corners of an element’s border box with the border-radius property.</p>
+ <span>div.container {
+  border: 3px solid blue;
+  border-radius: 5px;
+}</span><br>
+<p>The code in the example above will set all four corners of the border to a radius of 5 pixels (i.e. the same curvature that a circle with a radius of 5 pixels would have).</p>
+<p>You can create a border that is a perfect circle by first creating an element with the same width and height, and then setting the radius equal to half the width of the box, which is 50%.</p>
+<span>div.container {
+  height: 60px;
+  width: 60px;
+  border: 3px solid blue;
+  border-radius: 50%;
+}</span>
+<label>The code in the example above creates a <div> that is a perfect circle.</label>
+
+  
+<h3>Padding</h3>
+<p class="semiMain">The space between the contents of a box and the borders of a box is known as padding. Padding is like the space between a picture and the frame surrounding it. In CSS, you can modify this space with the (padding) property.</p>
+<p>The (padding) property is often used to expand the background color and make the content look less cramped.</p>
+<label>If you want to be more specific about the amount of padding on each side of a box’s content, you can use the following properties:</label>
+<ul>
+  <li><b>padding-top</b></li>
+  <li><b>padding-right</b></li>
+  <li><b>padding-bottom</b></li>
+  <li><b>padding-left</b></li>
+</ul>
+
+
+<h3>Margin</h3>
+<p class="semiMain">Margin refers to the space directly outside of the box. The margin property is used to specify the size of this space.</p>
+<label>If you want to be even more specific about the amount of margin on each side of a box, you can use the following properties:</label>
+<ul>
+  <li><b>margin-top</b></li>
+  <li><b>margin-bottom</b></li>
+  <li><b>margin-right</b></li>
+  <li><b>margin-left</b></li>
+</ul>
+<p>Each property affects the margin on only one side of the box, providing more flexibility in customization.</p>
+<h4>Auto</h4>
+<p class="semiMain">The margin property also lets you center content. However, you must follow a few syntax requirements. Take a look at the following example:</p>
+<span>div.headline {
+  width: 400px;
+  margin: 0 auto;
+}</span><br>
+<p>In the example above, margin: 0 auto; will center the divs in their containing elements. The 0 sets the top and bottom margins to 0 pixels. The auto value instructs the browser to adjust the left and right margins until the element is centered within its containing element.</p>
+<p class="semiMain">In order to center an element, a width must be set for that element. Otherwise, the width of the div will be automatically set to the full width of its containing element, like the <body>, for example. It’s not possible to center an element that takes up the full width of the page, since the width of the page can change due to display and/or browser window size.</p>
+  <p>In the example above, the width of the div is set to 400 pixels, which is less than the width of most screens. This will cause the div to center within a containing element that is greater than 400 pixels wide.</p>
+
+<h4>Margin Collaspse</h4>
+<p class="semiMain">Horizontal margins (left and right), like padding, are always displayed and added together. For example, if two divs with ids #div-one and #div-two, are next to each other, they will be as far apart as the sum of their adjacent margins.</p>
+<span>#img-one {
+  margin-right: 20px;
+}
+ <br>
+#img-two {
+  margin-left: 20px;
+}</span>
+<br>
+<p>In this example, the space between the #img-one and #img-two borders is 40 pixels. The right margin of #img-one (20px) and the left margin of #img-two (20px) add to make a total margin of 40 pixels.</p>
+<br><br>
+<p class="semiMain">Unlike horizontal margins, vertical margins do not add. Instead, the larger of the two vertical margins sets the distance between adjacent elements.</p>
+<span>#img-one {
+  margin-bottom: 30px;
+}
+ 
+#img-two {
+  margin-top: 20px;
+}</span><br>
+<p>In this example, the vertical margin between the #img-one and #img-two elements is 30 pixels. Although the sum of the margins is 50 pixels, the margin collapses so the spacing is only dependent on the #img-one bottom margin.</p>
+
+<h3>Minimum and Maximum Height and Width</h3>
+<p class="semiMain">Because a web page can be viewed through displays of differing screen size, the content on the web page can suffer from those changes in size. To avoid this problem, CSS offers two properties that can limit how narrow or how wide an element’s box can be sized to:</p>
+<ul>
+  <li><b>min-width—</b>this property ensures a minimum width of an element’s box.</li>
+  <li><b>max-width</b>—this property ensures a maximum width of an element’s box.</li>
+</ul>
+<br><br>
+<p>You can also limit the minimum and maximum height of an element:</p>
+<ul>
+  <li><b>min-height</b> — this property ensures a minimum height for an element’s box.</li>
+  <li><b>max-height</b> — this property ensures a maximum height of an element’s box.</li>
+</ul>
+
+<h3>Overflow</h3>
+<p>All of the components of the box model comprise an element’s size. For example, an image that has the following dimensions is 364 pixels wide and 244 pixels tall.</p>
+<ul>
+  <li>300 pixels wide</li>
+    <li>200 pixels tall</li>
+    <li>10 pixels padding on the left and right</li>
+    <li>10 pixels padding on the top and bottom</li>
+    <li>2 pixels border on the left and right</li>
+    <li>2 pixels border on the top and bottom</li>
+    <li>20 pixels margin on the left and right</li>
+    <li>10 pixels margin on the top and bottom</li>
+</ul>
+
+<p>The total dimensions (364px by 244px) are calculated by adding all of the vertical dimensions together and all of the horizontal dimensions together. Sometimes, these components result in an element that is larger than the parent’s containing area.</p><br>
+<p class="semiMain">The overflow property controls what happens to content that spills, or overflows, outside its box. The most commonly used values are:</p>
+<ul>
+  <li><b>hidden</b>—when set to this value, any content that overflows will be hidden from view.</li>
+  <li><b>scroll</b>—when set to this value, a scrollbar will be added to the element’s box so that the rest of the content can be viewed by scrolling.</li>
+  <li><b>visible</b>—when set to this value, the overflow content will be displayed outside of the containing element. Note, this is the default value.</li>
+</ul>
+
+<h3>Resetting Defaults</h3>
+<p class="semiMain">All major web browsers have a default stylesheet they use in the absence of an external stylesheet. These default stylesheets are known as user agent stylesheets. In this case, the term user agent is a technical term for the browser.</p>
+<p>User agent stylesheets often have default CSS rules that set default values for padding and margin. This affects how the browser displays HTML elements, which can make it difficult for a developer to design or style a web page.</p>
+<p>Many developers choose to reset these default values so that they can truly work with a clean slate.</p>
+<span>* {
+  margin: 0; <br>
+  padding: 0;
+}</span>
+<p>The code in the example above resets the default margin and padding values of all HTML elements. It is often the first CSS rule in an external stylesheet.</p>
+<p class="semiMain">Note that both properties are both set to 0. When these properties are set to 0, they do not require a unit of measurement.</p>
+
+<h3>Changing the Box Model</h3>
+<p class="semiMain">the border thickness and padding are added to the overall dimensions of the box. This makes it difficult to accurately size a box. Over time, this can also make all of a web page’s content difficult to position and manage.</p>
+<p>The same can be said about the box model that browsers assume. In CSS, the (box-sizing) property controls the type of box model the browser should use when interpreting a web page.</p>
+<p>The default value of this property is (content-box). This is the same box model that is affected by border thickness and padding.</p>
+<img src="https://content.codecademy.com/courses/updated_images/htmlcssdiagram_contentbox_Updated_1.svg" alt="content-box"  width="900" height="800" >
+<p class="semiMain">Fortunately, we can reset the entire box model and specify a new one: (border-box).</p>
+<img src="https://content.codecademy.com/courses/web-101/htmlcss1-diagram__borderbox.svg" alt="border-box" height="600" width="700"><br>
+<span>* {
+  box-sizing: border-box;
+}</span><br>
+<p>The code in the example above resets the box model to (border-box) for all HTML elements. This new box model avoids the dimensional issues that exist in the former box model you learned about.</p>
+<p>In this box model, the height and width of the box will remain fixed. The border thickness and padding will be included inside of the box, which means the overall dimensions of the box do not change.</p>
+
+
+
+<h3>Visibility</h3>
+<p class="semiMain">Visibility Elements can be hidden from view with the visibility property.</p>
+<p>The visibility property can be set to one of the following values:</p>
+<ul>
+  <li><b>hidden</b> — hides an element.</li>
+  <li><b>visible</b> — displays an element.</li>
+  <li><b>collapse</b> — collapses an element.</li>
+</ul>
+<p>Keep in mind, however, that users can still view the contents of the list item by viewing the source code in their browser. Furthermore, the web page will only hide the contents of the element. It will still leave an empty space where the element is intended to display.</p>
+<p><b>Note:</b> What’s the difference between (display: none) and (visibility: hidden)? An element with (display: none) will be completely removed from the web page. An element with (visibility: hidden), however, will not be visible on the web page, but the space reserved for it will.</p>
+
+
+
+</div>
+
+
+</div>
+   
+
+</body>
+
+
+</html>
